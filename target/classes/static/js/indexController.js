@@ -45,6 +45,7 @@ app.config(function($routeProvider)
     .when("/create_employee", 
     {
         templateUrl : "enterprise/create_employee.html"
+        ,controller: "createEmployee"
     })
     .when("/delete_employee", 
     {

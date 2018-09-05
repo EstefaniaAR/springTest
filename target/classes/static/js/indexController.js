@@ -50,9 +50,13 @@ app.config(function($routeProvider)
     {
         templateUrl : "enterprise/delete_employee.html"
     })
-    .when("read_employee", 
+    .when("/read_employee", 
     {
         templateUrl : "enterprise/read_employee.html"
+    })
+    .when("/update_employee", 
+    {
+        templateUrl : "enterprise/update_employee.html"
     })
     ;
 });

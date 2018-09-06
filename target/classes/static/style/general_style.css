@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
  html, body
  {
  	height:100%;
@@ -71,23 +74,38 @@ li a:hover {
     background-color: #555;
     color: white;
 }
+
  
        /* On small screens, set height to 'auto' for the grid */
- @media screen and (max-width: 767px) {
-   .row.content {height: auto;} 
- }
- @media (max-width: 768px) 
+ @media screen and (max-width: 767px) 
  {
-    .side-nav {
+   .row.content {height: auto;} 
+   .side-nav {
         display: none;
     }
     #contact-menu {
         display: none;
     }
+ }
+ @media (max-width: 768px) 
+ {
+    
 
  }
-@media screen and (min-width: 0px) and (max-width: 400px) {
+ 
+ [class*="col-"] {
+    width: 100%;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 400px) 
+{
   #hide-menu { display: block; }  /* show it on small screens */
+  h3 {font-size: 18px}
+  label {font-size: 12px;}
+  input{font-size: 12px;
+        width: 100px;}
+  small{display:none;}
 }
 
 @media screen and (min-width: 401px) and (max-width: 1600px) {

@@ -1,7 +1,9 @@
 package com.example.SpringAngularOracle.control;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -24,13 +26,14 @@ public class EmployeeRestController
 		repo.findById(id);
 	}
 	
-	@PostMapping("/setEmployee")
-	public void setEmployee(@RequestBody Employee emp )
+	@PostMapping(path="/createEmployee" , produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Object> setEmployee(@RequestBody Employee emp )
 	{
 		repo.save(emp);
+		return ResponseEntity.ok().build();
 	}
 	
-	@PostMapping("/updateEmployee")
+	@PutMapping("/updateEmployee")
 	public ResponseEntity<Object> modifyEmployee(@RequestBody Employee emp)
 	{
 		if(repo.existsById(emp.getId()))
@@ -45,7 +48,7 @@ public class EmployeeRestController
 			
 	}
 	
-	@PutMapping("/deleteEmployee")
+	@DeleteMapping("/deleteEmployee")
 	public void deleteEmployee(@RequestParam("id") long id)
 	{
 		repo.deleteById(id);

@@ -67,5 +67,11 @@ public class Employee {
 		this.department = department;
 	}
 
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", lastName=" + lastName + ", salary=" + salary
+				+ ", department=" + department + "]";
+	}
+
 
 }

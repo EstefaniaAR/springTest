@@ -1,4 +1,3 @@
-CREATE SEQUENCE EMPLOYEE_SEQ INCREMENT BY 1;
 
 
 INSERT INTO department (id_department,description) VALUES (1,'Development');

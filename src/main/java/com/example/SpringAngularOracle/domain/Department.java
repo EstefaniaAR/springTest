@@ -13,10 +13,11 @@ import javax.persistence.Table;
 public class Department {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "DEPARTMENT_SEQ")
-    @SequenceGenerator(sequenceName = "infocct_seq", allocationSize = 1, name = "DEPARTMENT_SEQ")
+    @SequenceGenerator(sequenceName = "department_seq", allocationSize = 1, name = "DEPARTMENT_SEQ")
 	@Column(name="id_department")
 	private long id;
 	private String description;
+	
 	public long getId() {
 		return id;
 	}
@@ -28,6 +29,10 @@ public class Department {
 	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	@Override
+	public String toString() {
+		return "Department [id=" + id + ", description=" + description + "]";
 	}
 	
 	

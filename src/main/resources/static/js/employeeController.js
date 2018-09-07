@@ -6,6 +6,7 @@ app.controller('createEmployee', ['$scope','$http','$location', function($scope,
 	var endpointReadDepartment='/getDepartments';
 	var contextPath = $location.absUrl().split("#")[0];
 	var endpointRead = '/getEmployees';
+	var endpointReadById = '/getEmployee/';
 	
 	$scope.readDepartments = function()
 	{
@@ -52,7 +53,23 @@ app.controller('createEmployee', ['$scope','$http','$location', function($scope,
 			    alert("Error:"+JSON.stringify(response.data));
 			    console.log(response);
 			  });
-	}
+	};
+	
+	$scope.readEmployee = function()
+	{
+		var resource = contextPath + endpointReadById+ +$scope.id;
+
+		$http.get(resource)
+			.then(function successCallback(response) 
+			{
+			    $scope.employee = response.data;
+			    $scope.found = true;
+			  }, function errorCallback(response) 
+			  {
+			    alert("Error:"+JSON.stringify(response.data));
+			    console.log(response);
+			  });
+	};
 
 }]);
 

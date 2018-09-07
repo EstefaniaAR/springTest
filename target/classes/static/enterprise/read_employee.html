@@ -1,24 +1,45 @@
 <h3>Read Employee</h3>
 <h2>All Employees</h2>
 <div class="row" ng-app="app" ng-controller="createEmployee" data-ng-init="readEmployees()">
-	<table class="table">
-	  <thead>
-	    <tr>
-	      <th scope="col">Id</th>
-	      <th scope="col">First Name</th>
-	      <th scope="col">Last Name</th>
-	      <th scope="col">Department</th>
-	      <th scope="col">Salary</th>
-	    </tr>
-	  </thead>
-	  <tbody>
-	    <tr ng-repeat="x in employees">
-	      <td >{{x.id}}</th>
-	      <td>{{x.name}}</td>
-	      <td>{{x.lastName}}</td>
-	      <td>{{x.department.id}}:{{x.department.description}}</td>
-	      <td>{{x.salary}}</td>
-	    </tr>
-	  </tbody>
-	</table>
+	<div class="col-12">
+		<table class="table">
+		  <thead>
+		    <tr>
+		      <th scope="col">Id</th>
+		      <th scope="col">First Name</th>
+		      <th scope="col">Last Name</th>
+		      <th scope="col">Department</th>
+		      <th scope="col">Salary</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr ng-repeat="x in employees">
+		      <td >{{x.id}}</th>
+		      <td>{{x.name}}</td>
+		      <td>{{x.lastName}}</td>
+		      <td>{{x.department.id}}:{{x.department.description}}</td>
+		      <td>$ {{x.salary}} USD per Month</td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+	<div class="col-12">
+		<form>
+			<div class="form-group" >
+			    <label for="name" >Enter Employee ID</label>
+			    <input type="number" ng-model="id" class="form-control" id="id" aria-describedby="idHelp" placeholder="Enter Employee ID">
+	  		</div>
+	  		
+	  		<button type="button" class="btn btn-primary" ng-click="readEmployee()">Search</button>
+	  		
+	  		<ul class="list-group" ng-show="found">
+	  			<li class="list-group-item">Name: {{employee.name}}</li>
+	  			<li class="list-group-item">Last Name: {{employee.lastName}}</li>
+	  			<li class="list-group-item">Department: {{employee.department.id}}: {{employee.department.description}}</li>
+	  			<li class="list-group-item">Salary: ${{employee.salary}}USD per Month</li>
+	  		</ul>
+	  		
+	  		
+		</form>
+	</div>
 </div>

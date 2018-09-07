@@ -5,6 +5,7 @@ app.controller('createEmployee', ['$scope','$http','$location', function($scope,
 	var endpointCreate = '/createEmployee';
 	var endpointReadDepartment='/getDepartments';
 	var contextPath = $location.absUrl().split("#")[0];
+	var endpointRead = '/getEmployees';
 	
 	$scope.readDepartments = function()
 	{
@@ -26,10 +27,11 @@ app.controller('createEmployee', ['$scope','$http','$location', function($scope,
 		var resource = contextPath + endpointCreate;
 		data = $scope.employee;
 		console.log(data);
+		$scope.employee.department = $scope.department; 
 		$http.post(resource, data)
 		.then(function successCallback(response) 
 		{
-			alert(JSON.stringify(response.xhrStatus));
+			alert("Employee successfully Created");
 			console.log(response);
 		  }, function errorCallback(response) 
 		  {
@@ -37,6 +39,20 @@ app.controller('createEmployee', ['$scope','$http','$location', function($scope,
 		    console.log(response);
 		  });
 	};
+	
+	$scope.readEmployees = function()
+	{
+		var resource = contextPath + endpointRead;
+		$http.get(resource)
+			.then(function successCallback(response) 
+			{
+			    $scope.employees = response.data;
+			  }, function errorCallback(response) 
+			  {
+			    alert("Error:"+JSON.stringify(response.data));
+			    console.log(response);
+			  });
+	}
 
 }]);
 

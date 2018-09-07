@@ -1,5 +1,7 @@
 package com.example.SpringAngularOracle.control;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -21,9 +23,15 @@ public class EmployeeRestController
 	private EmployeeRestRepository repo;
 	
 	@GetMapping("/getEmployee")
-	public void getEmployee(@RequestParam("id") long id)
+	public Employee getEmployee(@RequestParam("id") long id)
 	{
-		repo.findById(id);
+		return repo.findById(id);
+	}
+	
+	@GetMapping("/getEmployees")
+	public List<Employee> getEmployees()
+	{
+		return repo.findAll();
 	}
 	
 	@PostMapping(path="/createEmployee" , produces = MediaType.APPLICATION_JSON_VALUE)

@@ -103,8 +103,7 @@ li a:hover {
   #hide-menu { display: block; }  /* show it on small screens */
   h3 {font-size: 18px}
   label {font-size: 12px;}
-  input{font-size: 12px;
-        width: 100px;}
+  input{font-size: 12px;}
   small{display:none;}
 }
 

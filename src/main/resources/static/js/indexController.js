@@ -53,7 +53,7 @@ app.config(function($routeProvider)
     .when("/create_employee", 
     {
         templateUrl : "enterprise/create_employee.html"
-        ,controller: "createEmployee"
+        ,controller: "employeeController"
     })
     .when("/delete_employee", 
     {
@@ -62,10 +62,16 @@ app.config(function($routeProvider)
     .when("/read_employee", 
     {
         templateUrl : "enterprise/read_employee.html"
+        ,controller: "employeeController"
     })
     .when("/update_employee", 
     {
         templateUrl : "enterprise/update_employee.html"
+        ,controller: "employeeController"
+    })
+    .when("/contact", 
+    {
+        templateUrl : "enterprise/contact.html"
     })
     ;
 });

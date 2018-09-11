@@ -1,1 +1,22 @@
 <h3>Delete Employee</h3>
+
+<div class="row" ng-app="app" ng-controller="employeeController" data-ng-init="readDepartments()" >
+	<div class="col-12" >
+		<form>
+			<div class="form-group" >
+		    	<label for="name" >Enter Employee ID</label>
+		    	<input type="number" ng-model="id" class="form-control" id="id" aria-describedby="idHelp" placeholder="Enter Employee ID">
+	 		</div>
+		 	<button type="button" class="btn btn-primary" ng-click="readEmployee()">Search</button>
+		 	<div ng-show="found">
+			 	<ul class="list-group" ng-show="found">
+		  			<li class="list-group-item">Name: {{employee.name}}</li>
+		  			<li class="list-group-item">Last Name: {{employee.lastName}}</li>
+		  			<li class="list-group-item">Department: {{employee.department.id}}: {{employee.department.description}}</li>
+		  			<li class="list-group-item">Salary: ${{employee.salary}}USD per Month</li>
+	  			</ul>
+			   <button type="button" class="btn btn-primary" ng-click="deleteEmployee()">Submit</button>
+		   </div>
+	   </form>
+	 </div>
+</div>

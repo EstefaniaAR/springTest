@@ -56,10 +56,18 @@ public class EmployeeRestController
 			
 	}
 	
-	@DeleteMapping("/deleteEmployee")
-	public void deleteEmployee(@PathVariable("id") long id)
+	@DeleteMapping("/deleteEmployee/{id}")
+	public ResponseEntity<Object> deleteEmployee(@PathVariable("id") long id)
 	{
-		repo.deleteById(id);
+		if(repo.existsById(id))
+		{
+			repo.deleteById(id);
+			return ResponseEntity.noContent().build();
+		}
+		else
+		{
+			return ResponseEntity.notFound().build();
+		}
 	}
 	
 

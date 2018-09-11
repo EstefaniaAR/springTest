@@ -1,34 +1,49 @@
-html, body, .container-fluid, .row.content {
+html, body, .container-fluid, .row.content 
+{
     height: 100%;
 }
 
-
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar 
+{
+	margin-bottom: 0;
+    border-radius: 0;
+}
     
-    /* Set gray background color and 100% height */
-    .sidenav {
-      padding-top: 20px;
-      background-color: #f1f1f1;
-      height: 100%;
-    }
+/* Set gray background color and 100% height */
+.sidenav 
+{
+	padding-top: 20px;
+    background-color: #f1f1f1;
+    height: 100%;
+}
     
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: #555;
-      color: white;
-      padding: 15px;
-    }
+/* Set black background color, white text and some padding */
+footer 
+{
+	background-color: #555;
+    color: white;
+    padding: 15px;
     
-    nav ul li a span
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+footer a
+{
+	color:white;
+}
+footer a:hover
+{
+	color:white;
+}
+nav ul li a span
 {
    color :white;
 }
 
- ul {
+ul 
+{
     list-style: none; 
     padding: 10px;
     margin: 10px;
@@ -42,18 +57,21 @@ li a
 	text-decoration: none;
 }
 
-li a:hover {
-    background-color: #555;
+li a:hover 
+{
+	background-color: #555;
     color: gray;
 }
     
-        /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) 
+{
+	.sidenav 
+	{
+		height: auto;
         padding: 15px;
-      }
-      .row.content {height:auto;} 
-      .container-fluid {height:auto;} 
     }
+    .row.content {height:auto;} 
+    .container-fluid {height:auto;} 
+}
     

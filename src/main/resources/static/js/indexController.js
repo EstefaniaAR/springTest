@@ -10,6 +10,8 @@ app.controller('MainController', ['$scope','$http', function($scope,$http)
 	$scope.urlSideBar ='template/sideBar.html';
 	$scope.urlContent ='template/content.html';
 	$scope.urlNavBar ='template/navBar.html';
+	$scope.urlRightColumn ='template/right_column.html';
+	$scope.urlFooter ='template/footer.html';
 	
 	
 	$scope.openNav = function()
@@ -35,12 +37,18 @@ app.controller('MainController', ['$scope','$http', function($scope,$http)
 		 
 	};
 }]);
+
+
 app.config(function($routeProvider) 
 {
     $routeProvider
     .when("/", 
     {
-        templateUrl : "index.html"
+        templateUrl : "enterprise/home.html"
+    })
+    .when("/home", 
+    {
+        templateUrl : "enterprise/home.html"
     })
     .when("/create_employee", 
     {
@@ -61,8 +69,6 @@ app.config(function($routeProvider)
     })
     ;
 });
-
-
 
 
 	

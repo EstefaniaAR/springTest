@@ -1,68 +1,40 @@
-* {
-    box-sizing: border-box;
+html, body, .container-fluid, .row.content {
+    height: 100%;
 }
- html, body
- {
- 	height:100%;
- 	width:100%;
- 	margin:0%;
- 	padding:0%;
- }
 
- nav
- {
- 	position: relative !important;
- 	background-color: #102a45;
- 	color: white;
-    height: 100%; 
-    width:100%;
- }
- .side-nav
- {
- 	height:100%;
- 	width:auto;
- 	min-height:100%;
- 	background-color: #f1f1f1;
- 	position: fixed;
- 	transition: 0.5s;
- 	margin:0px;
- 	padding:0px;
- }
 
-.content
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    nav ul li a span
 {
-	margin:0px;
-	padding:0px;
+   color :white;
 }
- .ban_image 
- {
- 	width:100%;
- 	height:100px;
- }
- .center
- {
- 	text-align:center;
- 	margin:0px;
- 	padding:0px;
- 	width:100%
- }
- .float-left
- {
- 	float:left;
- }
- .fixed-margin
- {
- 	margin:10px
- }
+
  ul {
     list-style: none; 
     padding: 10px;
     margin: 10px;
     width:auto;
 }
-li
-{
-}
+
 li a
 {
 	display:block;
@@ -72,42 +44,16 @@ li a
 
 li a:hover {
     background-color: #555;
-    color: white;
+    color: gray;
 }
-
- 
-       /* On small screens, set height to 'auto' for the grid */
- @media screen and (max-width: 767px) 
- {
-   .row.content {height: auto;} 
-   .side-nav {
-        display: none;
-    }
-    #contact-menu {
-        display: none;
-    }
- }
- @media (max-width: 768px) 
- {
     
-
- }
- 
- [class*="col-"] {
-    width: 100%;
-}
-
-
-@media screen and (min-width: 0px) and (max-width: 400px) 
-{
-  #hide-menu { display: block; }  /* show it on small screens */
-  h3 {font-size: 18px}
-  label {font-size: 12px;}
-  input{font-size: 12px;}
-  small{display:none;}
-}
-
-@media screen and (min-width: 401px) and (max-width: 1600px) {
-  #hide-menu { display: none; }   /* hide it elsewhere */
-}
- 
+        /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+      .container-fluid {height:auto;} 
+    }
+    

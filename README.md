@@ -12,7 +12,7 @@ https://idevelopeveryday.blogspot.com/2018/06/v-behaviorurldefaultvmlo.html
 This steps might fix the problem 
 8. Before run this app, install an oracle data base and create an user called enterprise identified by enter2018
 
-#Requeriments
+# Requeriments
 1. Maven installed. How to install -> https://idevelopeveryday.blogspot.com/2018/06/v-behaviorurldefaultvmlo.html
 2. OJDBC8 added. If you already install OJBDC just change the dependency in pom.xml
 - groupId: com.oracle
@@ -25,7 +25,7 @@ This steps might fix the problem
 -user: enterprise
 -password: enter2018
 
-#Visit my wiki
+# Visit my wiki
 
 https://github.com/EstefaniaAR/springTest/wiki
 

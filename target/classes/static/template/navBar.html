@@ -1,34 +1,37 @@
 <!-- Navbar -->
-<nav class="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav" >
-    <!-- SideNav slide-out button -->
-    <div class="float-left">
-        <a class="glyphicon glyphicon-menu-hamburger"><span class="clearfix d-none d-sm-inline-block" ng-click="openNav()"></span></a> 
-    </div>
-    <!-- Breadcrumb-->
-    <div class="fixed-margin">
-        <p>CRUD application</p>
-    </div>
-    <ul  id="contact-menu" class="nav navbar-nav nav-flex-icons ml-auto">
-        <li class="nav-item">
-            <a class="nav-link"><i class="fa fa-envelope"></i> <span class="clearfix d-none d-sm-inline-block">Contact</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link"><i class="fa fa-comments-o"></i> <span class="clearfix d-none d-sm-inline-block">Support</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link"><i class="fa fa-user"></i> <span class="clearfix d-none d-sm-inline-block">Account</span></a>
-        </li>
-    </ul>
-    <!--
-    <div id="hide-menu" class="dropdown">
-		<button data-ng-click="mc.openDrop();" class="dropbtn glyphicon glyphicon-menu-down"></button>
-	  	<div id="myDropdown" class="dropdown-content">
-            <a class="nav-link"> <span class="clearfix d-none d-sm-inline-block">Contact</span></a>
-            <a class="nav-link"><span class="clearfix d-none d-sm-inline-block">Support</span></a>
-            <a class="nav-link"> <span class="clearfix d-none d-sm-inline-block">Account</span></a>	    	
-	  	</div>
-	</div>
-	-->
+<nav class="navbar navbar-inverse navbar-expand-sm ">
+	<!-- Content nav -->
+	<div class ="container-fluid">
+			<!-- Button in small screeens for show contact menu-->
+		    <div class="navbar-header">
+			    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#contact-menu">
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>                        
+		      	</button>
+		    </div>
+		  	<!-- /.Button in small screeens -->
+		  	<a class="navbar-brand" href="#!home">CRUD APP</a>
+		  	<!-- Contact menu -->
+			<div  class="collapse navbar-collapse" id="contact-menu">
+			    <ul  id="menu" class="navbar-nav mr-auto">
+			    	 <li class="nav-item">
+			            <a class="nav-link" href="#!home"><i class="fa fa-home"></i> <span class="clearfix d-none d-sm-inline-block">Home</span></a>
+			        </li>
+			        <li class="nav-item">
+			            <a class="nav-link"><i class="fa fa-envelope"></i> <span class="clearfix d-none d-sm-inline-block">Contact</span></a>
+			        </li>
+			        <li class="nav-item">
+			            <a class="nav-link"><i class="fa fa-comments-o"></i> <span class="clearfix d-none d-sm-inline-block">Support</span></a>
+			        </li>
+			    </ul>
+			    <ul class="nav navbar-nav navbar-right">
+			        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			    </ul>
+		    </div>
+		   	<!-- /.Contact menu -->
+		</div>
+		<!-- /.Content nav -->
 </nav>
 
 <!-- /.Navbar -->
